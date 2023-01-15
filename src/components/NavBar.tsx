@@ -7,26 +7,26 @@ import { IoMailSharp } from 'react-icons/io5';
 
 const NavBar = () => {
   return (
-    <nav className='font-esteban bg-violet-200 p-1 flex gap-4 justify-between'>
-      <a className='flex flex-col align-center'>
+    <nav className='sticky font-handlee bg-blue-100 px-2 pt-1 flex justify-between'>
+      <a className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer'>
+        <IoHome className='w-full text-black'/>
         Home
-        <IoHome className='w-full' />
       </a>
-      <a className='flex flex-col align-center'>
+      <a className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer'>
+        <IoInformationCircleSharp className='w-full text-blue-400'  />
         About
-        <IoInformationCircleSharp className='w-full' />
       </a>
-      <a className='flex flex-col align-center'>
+      <a className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer'>
+        <IoBookSharp className='w-full text-green-600'  />
         Poetry
-        <IoBookSharp className='w-full' />
       </a>
-      <a className='flex flex-col align-center'>
+      <a className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer'>
+        <IoLogoYoutube className='w-full text-youtube-red' />
         Media
-        <IoLogoYoutube className='w-full' />
       </a>
-      <a className='flex flex-col align-center'>
+      <a className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer'>
+        <IoMailSharp className='w-full text-gray-600' />
         Contact me
-        <IoMailSharp className='w-full' />
       </a>
     </nav>
   );

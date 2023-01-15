@@ -8,6 +8,11 @@ module.exports = {
     extend: {
       fontFamily: {
         'esteban': ['Esteban'],
+        'handlee': ['Handlee'],
+        'tangerine': ['Tangerine'],
+      },
+      colors: {
+        'youtube-red': '#ff0000',
       },
     },
   },
