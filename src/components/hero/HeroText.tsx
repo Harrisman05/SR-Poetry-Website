@@ -1,16 +1,15 @@
 import React from 'react';
-import hero from '../assets/profile_pic.png';
 
-const Hero = () => {
+const HeroText = () => {
   return (
-    <div className='flex justify-evenly bg-orange-50'>
-      <img src={hero} className='h-auto w-48' alt='' />
+    <div>
       <h1 className='font-tangerine text-6xl text-center w-con'>
         Séamus
         <span className='block'>Rattigan</span>
       </h1>
+      <p className='font-handlee text-base leading-10'>Friendly Poet</p>
     </div>
   );
 };
 
-export default Hero;
+export default HeroText;

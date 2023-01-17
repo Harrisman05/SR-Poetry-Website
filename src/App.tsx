@@ -1,12 +1,18 @@
 import React from 'react';
-import NavBar from './components/NavBar';
-import Hero from './components/Hero';
+import NavBar from './components/nav/NavBar';
+import Hero from './components/hero/Hero';
+import About from './components/about/About';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <section className='w-screen h-screen'>
-      <NavBar />
-      <Hero/>
+    <section className='flex justify-center max-w-8xl h-screen bg-orange-50'>
+      <section className='w-[800px] mx-auto'>
+        <NavBar />
+        <Hero />
+        <About />
+        <Footer />
+      </section>
     </section>
   );
 }
