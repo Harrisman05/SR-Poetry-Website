@@ -1,17 +1,16 @@
 import React from 'react';
 import NavBar from '../components/nav/NavBar';
-import Hero from '../components/hero/Hero';
-import About from '../components/about/About';
+import Hero from '../components/Home/Hero';
+import About from '../components/Home/About';
 import Footer from '../components/footer/Footer';
 
 const Home = () => {
   return (
-    <section className='flex justify-center max-w-8xl h-screen bg-pink-50'>
-      <header className='w-[800px] mx-auto'>
+    <section className='flex justify-center'>
+      <div className='w-[800px] mx-auto'>
         <Hero />
         <About />
-        <Footer />
-      </header>
+      </div>
     </section>
   );
 };
