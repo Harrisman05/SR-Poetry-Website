@@ -1,19 +1,27 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
+// components
+
 import NavBar from './components/nav/NavBar';
-import Hero from './components/hero/Hero';
-import About from './components/about/About';
-import Footer from './components/footer/Footer';
+
+// pages
+import Home from './pages/Home';
+import About from './pages/About'
 
 function App() {
   return (
-    <section className='flex justify-center max-w-8xl h-screen bg-pink-50'>
-      <section className='w-[800px] mx-auto'>
-        <NavBar />
-        <Hero />
-        <About />
-        <Footer />
-      </section>
-    </section>
+    <BrowserRouter>
+    <header>
+      < NavBar /> 
+    </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 
