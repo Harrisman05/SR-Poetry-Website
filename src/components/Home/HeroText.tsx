@@ -7,7 +7,7 @@ const HeroText = () => {
         Séamus
         <span className='block'>Rattigan</span>
       </h1>
-      <p className='font-handlee text-base leading-10'>Friendly Poet</p>
+      <p className='font-handlee text-base leading-10 text-center'>Friendly Poet</p>
     </div>
   );
 };

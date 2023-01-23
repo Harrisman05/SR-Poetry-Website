@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoHome } from 'react-icons/io5';
 import { IoInformationCircleSharp } from 'react-icons/io5';
 import { IoBookSharp } from 'react-icons/io5';
