@@ -29,8 +29,8 @@ const Poetry = () => {
   }, []);
 
   return (
-    <section className='flex flex-col bg-slate-300'>
-      <div className='text-center'>Poetry index title</div>
+    <section className='flex flex-col bg-slate-300 font-baskerville'>
+      <div className='text-center text-lg'>Poetry index title</div>
       <div className='text-xs'>
         Poetry index description - Lorem ipsum dolor sit amet, consectetur
         adipisicing elit. Debitis, obcaecati! Laborum nulla sunt dolorum quos
