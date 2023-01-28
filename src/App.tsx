@@ -12,7 +12,6 @@ import NavBar from './components/nav/NavBar';
 
 // pages
 import Home from './pages/Home';
-import About from './pages/About';
 import PoetryIndex from './pages/PoetryIndex';
 import PoemSelected from './pages/PoemSelected';
 import Media from './pages/Media';
@@ -23,7 +22,6 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
       <Route path='/' element={<Home />} />
-      <Route path='about' element={<About />} />
       <Route path='poetry-index' element={<PoetryIndex />} />
       <Route path='poem-selected' element={<PoemSelected />} />
       <Route path='media' element={<Media />} />

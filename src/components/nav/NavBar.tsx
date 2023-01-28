@@ -16,13 +16,6 @@ const NavBar = () => {
         Home
       </NavLink>
       <NavLink
-        to='about'
-        className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
-      >
-        <IoInformationCircleSharp className='w-full text-blue-400' />
-        About
-      </NavLink>
-      <NavLink
         to='poetry-index'
         className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
       >
