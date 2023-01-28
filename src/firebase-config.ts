@@ -26,9 +26,6 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 
-// This is just a helper to add the type to the db responses
-const createCollection = <T = DocumentData>(collectionName: string) => {
-  return collection(db, collectionName) as CollectionReference<T>;
-};
+// Within database, create reference to poems Collection 
 
-export const poemsCollection = createCollection<DocumentData>('poems-db');
+export const poemsCollection = collection(db,'poems-db');

@@ -23,7 +23,7 @@ const NavBar = () => {
         About
       </NavLink>
       <NavLink
-        to='poetry'
+        to='poetry-index'
         className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
       >
         <IoBookSharp className='w-full text-green-600' />
@@ -37,7 +37,7 @@ const NavBar = () => {
         Media
       </NavLink>
       <NavLink
-        to='contact_me'
+        to='contact-me'
         className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
       >
         <IoMailSharp className='w-full text-gray-600' />

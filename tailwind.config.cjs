@@ -10,9 +10,11 @@ module.exports = {
         'esteban': ['Esteban'],
         'handlee': ['Handlee'],
         'tangerine': ['Tangerine'],
+        'baskerville': ['Baskervville']
       },
       colors: {
         'youtube-red': '#ff0000',
+        'hyperlink-blue': '#0000EE'
       },
     },
   },
