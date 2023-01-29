@@ -34,4 +34,4 @@ const poem_rejoined = newline_arr.join('');
 
 console.log(poem_rejoined);
 
-fs.writeFileSync(output_poem_filepath, poem_rejoined, 'utf-8');
+// fs.writeFileSync(output_poem_filepath, poem_rejoined, 'utf-8');

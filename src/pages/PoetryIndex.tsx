@@ -21,9 +21,10 @@ const Poetry = () => {
       // confusing syntax, but extract all the data and id from the data.docs
       // property and map it to a new object
 
-      setPoems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      setTimeout(() => console.log(poems), 5000);
 
-      console.log(poems);
+      setPoems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      
     };
     getPoemsFromDb();
   }, []);
