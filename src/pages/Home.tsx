@@ -7,9 +7,8 @@ import Footer from '../components/footer/Footer';
 const Home = () => {
   return (
     <section className='flex justify-center'>
-      <div className='w-[800px] mx-auto'>
+      <div className='w-[800px]'>
         <Hero />
-        <About />
       </div>
     </section>
   );
