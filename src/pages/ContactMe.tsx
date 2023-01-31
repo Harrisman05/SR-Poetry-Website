@@ -1,25 +1,44 @@
 const ContactMe = () => {
   return (
     <div className='font-baskerville'>
-      <h1 className='text-center text-4xl my-10'>Contact Me</h1>
+      <h1 className='my-10 text-center text-4xl'>Contact Me</h1>
       <form
         action='https://formsubmit.co/'
         method='POST'
-        className='w-9/12 max-w-sm mx-auto grid'
+        className='mx-auto grid w-9/12 max-w-sm'
       >
         <div>
-          <label className='block mb-3'>Full Name:</label>
-          <input className='w-full mb-3 pl-1 border-2 border-gray-500 rounded-md' type='text' name='name' required />
+          <label className='mb-3 block'>Full Name:</label>
+          <input
+            className='mb-3 w-full rounded-md border-2 border-gray-500 pl-1'
+            type='text'
+            name='name'
+            required
+          />
         </div>
         <div>
-          <label className='block mb-3'>Email:</label>
-          <input className='w-full mb-3 pl-1 border-2 border-gray-500 rounded-md' type='text' name='email' required />
+          <label className='mb-3 block'>Email:</label>
+          <input
+            className='mb-3 w-full rounded-md border-2 border-gray-500 pl-1'
+            type='text'
+            name='email'
+            required
+          />
         </div>
         <div>
-          <label className='block mb-3'>Message:</label>
-          <textarea className='w-full h-56 mb-3 pl-1 border-2 border-gray-500 rounded-md' name='message' required></textarea>
+          <label className='mb-3 block'>Message:</label>
+          <textarea
+            className='mb-3 h-56 w-full rounded-md border-2 border-gray-500 pl-1'
+            name='message'
+            required
+          ></textarea>
         </div>
-        <button className='text-2xl hover:text-hyperlink-blue hover:underline' type='submit'>Send</button>
+        <button
+          className='text-2xl hover:text-hyperlink-blue hover:underline'
+          type='submit'
+        >
+          Send
+        </button>
       </form>
     </div>
   );

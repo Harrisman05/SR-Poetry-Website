@@ -24,7 +24,6 @@ const Poetry = () => {
       setTimeout(() => console.log(poems), 5000);
 
       setPoems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-      
     };
     getPoemsFromDb();
   }, []);
@@ -44,10 +43,18 @@ const Poetry = () => {
 
       <div className='flex flex-col'>
         {poems.map((poem) => {
-          return <Link to='/poem-selected' state={poem} key={poem.id} className='text-center font-tangerine text-lg text-hyperlink-blue hover:underline'>{poem.name} </Link>;
+          return (
+            <Link
+              to='/poem-selected'
+              state={poem}
+              key={poem.id}
+              className=' text-center font-tangerine text-lg text-hyperlink-blue hover:underline'
+            >
+              {poem.name}{' '}
+            </Link>
+          );
         })}
       </div>
-
     </section>
   );
 };
