@@ -9,15 +9,15 @@ const ContactMe = () => {
       >
         <div>
           <label className='block mb-3'>Full Name:</label>
-          <input className='w-full mb-3 pl-1' type='text' name='name' required />
+          <input className='w-full mb-3 pl-1 border-2 border-gray-500 rounded-md' type='text' name='name' required />
         </div>
         <div>
           <label className='block mb-3'>Email:</label>
-          <input className='w-full mb-3 pl-1' type='text' name='email' required />
+          <input className='w-full mb-3 pl-1 border-2 border-gray-500 rounded-md' type='text' name='email' required />
         </div>
         <div>
           <label className='block mb-3'>Message:</label>
-          <textarea className='w-full h-28 mb-3 pl-1' name='message' required></textarea>
+          <textarea className='w-full h-56 mb-3 pl-1 border-2 border-gray-500 rounded-md' name='message' required></textarea>
         </div>
         <button className='text-2xl hover:text-hyperlink-blue hover:underline' type='submit'>Send</button>
       </form>

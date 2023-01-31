@@ -4,7 +4,7 @@ import Footer from '../components/footer/Footer';
 
 const RootLayout = () => {
   return (
-    <div className='root-layout max-w-8xl bg-sky-50'>
+    <div className='root-layout max-w-8xl bg-orange-50'>
       <div className='max-w-[800px] flex flex-col min-h-screen mx-auto'>
         <header>
           <NavBar />
