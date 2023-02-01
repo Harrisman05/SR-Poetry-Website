@@ -15,6 +15,7 @@ const PoemSelected = () => {
 
   const selectedPoemDescription = state.description;
   const selectedPoemTitle = state.name;
+  const selectedAudioURL = new URL(`../assets/audios/${state.audio_file}`, import.meta.url).href // https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
 
   console.log(location);
 
@@ -47,7 +48,7 @@ const PoemSelected = () => {
         {selectedPoemDescription}
       </div>
       <ReactHowler
-        src={[]}
+        src={[selectedAudioURL]}
         playing={isPlaying}
         onEnd={promptNextAudio}
       />
