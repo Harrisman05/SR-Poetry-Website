@@ -1,7 +1,7 @@
 import ReactHowler from 'react-howler';
 import { useLocation } from 'react-router-dom';
 import { PoemData } from '../types/poems';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 
@@ -38,7 +38,7 @@ const PoemSelected = () => {
       console.log('started again');
     }, 0);
   };
-
+  
   return (
     <section>
       <div className='py-4 text-center font-tangerine text-5xl'>
