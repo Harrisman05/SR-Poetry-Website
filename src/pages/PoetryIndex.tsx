@@ -23,7 +23,7 @@ const Poetry = () => {
 
       setTimeout(() => console.log(poems), 5000);
 
-      setPoems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      setPoems(data.docs.map((doc: any) => ({ id: doc.id, ...doc.data() }))); // lose type safety setting database data to PoemsData array
     };
     getPoemsFromDb();
   }, []);

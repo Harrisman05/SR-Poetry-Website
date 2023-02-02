@@ -1,5 +1,4 @@
 import { IoHome } from 'react-icons/io5';
-import { IoInformationCircleSharp } from 'react-icons/io5';
 import { IoBookSharp } from 'react-icons/io5';
 import { IoLogoYoutube } from 'react-icons/io5';
 import { IoMailSharp } from 'react-icons/io5';

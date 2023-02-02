@@ -9,7 +9,7 @@ const PoemSelected = () => {
   const location = useLocation();
   const state = location.state as PoemData; // trick to set type for location.state - https://github.com/reach/router/issues/414
 
-  const selectedPoem = state.poem!.replaceAll('\\n', '\n');
+  const selectedPoem = state.poem.replaceAll('\\n', '\n');
 
   // ! needed to tell TS compiler poem is always defined
 
@@ -59,7 +59,7 @@ const PoemSelected = () => {
             onEnd={promptNextAudio}
           />
           {isPlaying ? (
-            <button className='mx-auto inline-block w-12 cursor-default'>
+            <button className='mx-auto w-12 cursor-default'>
               <PauseCircleIcon
                 sx={{ color: 'crimson', '&:hover': { color: 'red' }}}
                 className='scale-150 cursor-pointer'
@@ -67,7 +67,7 @@ const PoemSelected = () => {
               />
             </button>
           ) : (
-            <button className='mx-auto inline-block w-12 cursor-default'>
+            <button className='mx-auto w-12 cursor-default'>
               <PlayCircleIcon
                 sx={{ color: 'darkgreen', '&:hover': { color: 'green' } }}
                 className='scale-150 cursor-pointer'
