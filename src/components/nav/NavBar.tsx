@@ -6,31 +6,31 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav className='sticky font-handlee bg-blue-200 px-2 pt-1 flex justify-between w-auto'>
+    <nav className='sticky flex w-auto justify-between bg-blue-200 px-2 pt-1 font-handlee'>
       <NavLink
         to='/'
-        className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
+        className='align-center flex flex-col text-sm hover:cursor-pointer hover:text-purple-700 hover:underline'
       >
         <IoHome className='w-full text-orange-400' />
         Home
       </NavLink>
       <NavLink
         to='poetry-index'
-        className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
+        className='align-center flex flex-col text-sm hover:cursor-pointer hover:text-purple-700 hover:underline'
       >
         <IoBookSharp className='w-full text-green-600' />
         Poetry
       </NavLink>
       <NavLink
         to='media'
-        className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
+        className='align-center flex flex-col text-sm hover:cursor-pointer hover:text-purple-700 hover:underline'
       >
         <IoLogoYoutube className='w-full text-youtube-red' />
         Media
       </NavLink>
       <NavLink
         to='contact-me'
-        className='flex flex-col align-center text-sm hover:underline hover:cursor-pointer hover:text-purple-700'
+        className='align-center flex flex-col text-sm hover:cursor-pointer hover:text-purple-700 hover:underline'
       >
         <IoMailSharp className='w-full text-gray-600' />
         Contact me

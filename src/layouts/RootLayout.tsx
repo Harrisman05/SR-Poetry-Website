@@ -5,7 +5,8 @@ import Footer from '../components/footer/Footer';
 const RootLayout = () => {
   return (
     <div className='root-layout max-w-8xl bg-orange-50'>
-      <div className='max-w-[800px] flex flex-col min-h-screen mx-auto'>
+      <div className='absolute left-0 h-[38px] w-screen bg-blue-200'></div>
+      <div className='mx-auto flex min-h-[calc(100vh-17px)] max-w-[800px] flex-col'>
         <header>
           <NavBar />
         </header>
@@ -13,8 +14,8 @@ const RootLayout = () => {
           <Outlet />
           {/* Outlet where to output page components that are nested in / route */}
         </main>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };
