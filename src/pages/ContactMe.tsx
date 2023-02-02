@@ -3,7 +3,7 @@ const ContactMe = () => {
     <div className='font-baskerville'>
       <h1 className='my-10 text-center text-4xl'>Contact Me</h1>
       <form
-        action='https://formsubmit.co/'
+        action='https://formsubmit.co/bd4b1add7bc8d333c94a705ae54d3153'
         method='POST'
         className='mx-auto grid w-9/12 max-w-sm'
       >

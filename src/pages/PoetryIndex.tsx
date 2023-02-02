@@ -18,8 +18,7 @@ const Poetry = () => {
 
       console.log(data);
 
-      // confusing syntax, but extract all the data and id from the data.docs
-      // property and map it to a new object
+      // confusing syntax, but extract all the data and id from the data.docs property and map it to a new object
 
       setTimeout(() => console.log(poems), 5000);
 
@@ -50,7 +49,7 @@ const Poetry = () => {
               key={poem.id}
               className=' text-center font-tangerine text-lg text-hyperlink-blue hover:underline'
             >
-              {poem.name}{' '}
+              {poem.name}
             </Link>
           );
         })}
