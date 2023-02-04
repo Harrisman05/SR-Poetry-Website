@@ -55,10 +55,10 @@ const PoemSelected = () => {
   return (
     <section>
       <div className='flex flex-col items-center'>
-        <div className='py-4 text-center font-tangerine text-5xl'>
+        <div className='py-4 text-center font-tangerine text-4xl md:text-5xl'>
           {selectedPoemTitle}
         </div>
-        <div className='pb-4 text-center font-baskerville'>
+        <div className='pb-4 text-center text-sm md:text-lg font-baskerville'>
           {selectedPoemDescription}
         </div>
         <div className='flex pb-4 font-baskerville font-bold'>
@@ -95,10 +95,10 @@ const PoemSelected = () => {
           </button>
         </div>
       </div>
-      <div className='whitespace-pre-wrap border-t-2 border-dashed border-black pt-4 text-center font-baskerville italic'>
+      <div className='whitespace-pre-wrap border-t-2 text-sm md:text-lg border-dashed border-black pt-4 text-center font-baskerville italic'>
         {selectedPoem}
       </div>
-      <p className='text-center font-baskerville mt-5'>
+      <p className='text-center font-baskerville my-5'>
           <Link
             to='/poetry-index'
             className='text-hyperlink-blue hover:underline'
