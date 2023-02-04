@@ -1,5 +1,5 @@
 import ReactHowler from 'react-howler';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { PoemData } from '../types/poems';
 import { useEffect, useRef, useState } from 'react';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
@@ -98,6 +98,14 @@ const PoemSelected = () => {
       <div className='whitespace-pre-wrap border-t-2 border-dashed border-black pt-4 text-center font-baskerville italic'>
         {selectedPoem}
       </div>
+      <p className='text-center font-baskerville mt-5'>
+          <Link
+            to='/poetry-index'
+            className='text-hyperlink-blue hover:underline'
+          >
+            Return to Poetry Index
+          </Link>
+        </p>
     </section>
   );
 };

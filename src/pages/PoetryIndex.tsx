@@ -32,8 +32,8 @@ const Poetry = () => {
 
   return (
     <section className='flex flex-col font-baskerville'>
-      <h1 className='py-4 text-center text-4xl'>Poetry index</h1>
-      <p className='border-b-2 border-dashed border-black pb-6 text-center text-xl'>
+      <h1 className='py-4 text-center text-3xl md:text-4xl'>Poetry index</h1>
+      <p className='border-b-2 border-dashed border-black pb-6 text-center text-lg md:text-xl'>
         Select a poem from the list to read
       </p>
       <div className='flex flex-col items-center justify-center pt-4 '>
