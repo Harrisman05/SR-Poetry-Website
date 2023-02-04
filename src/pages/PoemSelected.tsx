@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import ReplayCircleFilled from '@mui/icons-material/ReplayCircleFilled';
+import ReactAudioPlayer from 'react-audio-player';
 
 const PoemSelected = () => {
   const location = useLocation();
@@ -97,6 +98,11 @@ const PoemSelected = () => {
           </button>
         </div>
       </div>
+      <ReactAudioPlayer
+      src={selectedAudioURL}
+      autoPlay
+      controls
+      />
       <div className='whitespace-pre-wrap border-t-2 text-sm md:text-lg border-dashed border-black pt-4 text-center font-baskerville italic'>
         {selectedPoem}
       </div>
