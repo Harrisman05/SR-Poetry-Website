@@ -16,20 +16,11 @@ const PoemSelected = () => {
 
   const selectedPoemDescription = state.description;
   const selectedPoemTitle = state.name;
+  
   const selectedAudioURL = new URL(
     `../assets/audios/${state.audio_file}`,
     import.meta.url
   ).href; // https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
-
-  const webmAudio = new URL(
-    `../assets/audios/me_name_is_seamus.wav`,
-    import.meta.url
-  ).href;
-  
-  const oggAudio = new URL(
-    `../assets/audios/me_name_is_seamus.ogg`,
-    import.meta.url
-  ).href; 
 
   console.log(location);
 
