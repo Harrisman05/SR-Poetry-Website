@@ -116,9 +116,6 @@ const PoemSelected = () => {
           Return to Poetry Index
         </Link>
       </p>
-      <audio controls src={selectedAudioURL} >seamus ogg</audio>
-      <audio controls src={webmAudio}>seamus webm</audio>
-      <audio controls src={oggAudio}>seamus webm</audio>
     </section>
   );
 };
