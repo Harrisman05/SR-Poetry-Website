@@ -3,12 +3,12 @@ import { TypeAnimation } from 'react-type-animation';
 const HeroText = () => {
   return (
     <div>
-      <h1 className='font-tangerine text-6xl text-center w-con'>
+      <h1 className='font-tangerine text-5xl sm:text-6xl lg:text-7xl text-center w-con'>
         Séamus
-        <span className='block'>Rattigan</span>
+        <span className='block mb-5'>Rattigan</span>
       </h1>
       <TypeAnimation
-        className='font-handlee text-lg leading-10 text-center'
+        className='font-handlee text-md md:text-xl text-center'
         sequence={[
           'London Irish Poet',
           5000,

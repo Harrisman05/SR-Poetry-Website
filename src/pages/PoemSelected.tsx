@@ -95,7 +95,7 @@ const PoemSelected = () => {
           </button>
         </div>
       </div>
-      <div className='whitespace-pre-wrap border-t-2 border-dashed  border-black pt-4 text-center font-baskerville italic'>
+      <div className='whitespace-pre-wrap border-t-2 border-dashed border-black pt-4 text-center font-baskerville italic'>
         {selectedPoem}
       </div>
     </section>

@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import { poemsCollection } from '../firebase-config';
 import { getDocs } from 'firebase/firestore';
 import { PoemData } from '../types/poems';
+import { RotatingLines } from 'react-loader-spinner';
 
 const Poetry = () => {
   const [poems, setPoems] = useState<PoemData[]>([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // useEffect executes when page loads. Make async request to firestore
@@ -14,6 +15,7 @@ const Poetry = () => {
 
     const getPoemsFromDb = async () => {
       // Get documents from the poems collection
+      setLoading(true);
       const data = await getDocs(poemsCollection);
 
       console.log(data);
@@ -23,31 +25,31 @@ const Poetry = () => {
       setTimeout(() => console.log(poems), 5000);
 
       setPoems(data.docs.map((doc: any) => ({ id: doc.id, ...doc.data() }))); // lose type safety setting database data to PoemsData array
+      setLoading(false);
     };
     getPoemsFromDb();
   }, []);
 
   return (
-    <section className='flex flex-col bg-slate-300 font-baskerville'>
-      <div className='text-center text-lg'>Poetry index title</div>
-      <div className='text-xs'>
-        Poetry index description - Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Debitis, obcaecati! Laborum nulla sunt dolorum quos
-        sit recusandae sapiente perferendis, ducimus consequuntur laboriosam
-        aperiam! Earum minima corporis consectetur fugit! Soluta neque rerum
-        voluptatum saepe hic obcaecati alias iste laboriosam distinctio ad
-        corrupti repudiandae illo, commodi facilis enim? Voluptatem quos
-        assumenda magnam.
-      </div>
-
-      <div className='flex flex-col'>
+    <section className='flex flex-col font-baskerville'>
+      <h1 className='py-4 text-center text-4xl'>Poetry index</h1>
+      <p className='border-b-2 border-dashed border-black pb-6 text-center text-xl'>
+        Select a poem from the list to read
+      </p>
+      <div className='flex flex-col items-center justify-center pt-4 '>
+        {loading ? (
+          <div className='flex flex-col items-center'>
+            <p className='pb-5 font-baskerville text-xl'>Fetching poems...</p>
+            <RotatingLines />
+          </div>
+        ) : null}
         {poems.map((poem) => {
           return (
             <Link
               to='/poem-selected'
               state={poem}
               key={poem.id}
-              className=' text-center font-tangerine text-lg text-hyperlink-blue hover:underline'
+              className=' py-2 text-center font-tangerine text-3xl text-hyperlink-blue hover:underline'
             >
               {poem.name}
             </Link>
