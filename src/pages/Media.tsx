@@ -1,7 +1,6 @@
-import React from 'react';
 
 const Media = () => {
-
+    <p>Media</p>
 };
 
 export default Media;
