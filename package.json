@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build --port 3000",
+    "build": "tsc && vite build",
     "preview": "vite preview",
-    "start": "tsc && vite build"
+    "start": "tsc && vite build",
+    "serve": "vite --port 8000"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
