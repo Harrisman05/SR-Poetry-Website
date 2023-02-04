@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from 'react';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import ReplayCircleFilled from '@mui/icons-material/ReplayCircleFilled';
-import ReactAudioPlayer from 'react-audio-player';
 
 const PoemSelected = () => {
   const location = useLocation();
@@ -21,6 +20,16 @@ const PoemSelected = () => {
     `../assets/audios/${state.audio_file}`,
     import.meta.url
   ).href; // https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
+
+  const webmAudio = new URL(
+    `../assets/audios/me_name_is_seamus.wav`,
+    import.meta.url
+  ).href;
+  
+  const oggAudio = new URL(
+    `../assets/audios/me_name_is_seamus.ogg`,
+    import.meta.url
+  ).href; 
 
   console.log(location);
 
@@ -59,61 +68,57 @@ const PoemSelected = () => {
         <div className='py-4 text-center font-tangerine text-4xl md:text-5xl'>
           {selectedPoemTitle}
         </div>
-        <div className='pb-4 text-center text-sm md:text-lg font-baskerville'>
+        <div className='pb-4 text-center font-baskerville text-sm md:text-lg'>
           {selectedPoemDescription}
         </div>
         <div className='flex pb-4 font-baskerville font-bold'>
           <p className='mr-1'>Audio:</p>
           <ReactHowler
-            format={['webm', '.webm', 'wav', '.wav']}
-            html5={true}
             src={[selectedAudioURL]}
             playing={isPlaying}
             onEnd={promptNextAudio}
             ref={howler}
           />
           {isPlaying ? (
-              <button className='mx-auto w-12 cursor-default'>
-                <PauseCircleIcon
-                  sx={{ color: 'crimson', '&:hover': { color: 'red' } }}
-                  className='scale-150 cursor-pointer'
-                  onClick={stopAudio}
-                />
-              </button>
+            <button className='mx-auto w-12 cursor-default'>
+              <PauseCircleIcon
+                sx={{ color: 'crimson', '&:hover': { color: 'red' } }}
+                className='scale-150 cursor-pointer'
+                onClick={stopAudio}
+              />
+            </button>
           ) : (
-              <button className='mx-auto w-12 cursor-default'>
-                <PlayCircleIcon
-                  sx={{ color: 'darkgreen', '&:hover': { color: 'green' } }}
-                  className='scale-150 cursor-pointer'
-                  onClick={playAudio}
-                />
-              </button>
+            <button className='mx-auto w-12 cursor-default'>
+              <PlayCircleIcon
+                sx={{ color: 'darkgreen', '&:hover': { color: 'green' } }}
+                className='scale-150 cursor-pointer'
+                onClick={playAudio}
+              />
+            </button>
           )}
           <button>
-          <ReplayCircleFilled
-            sx={{ color: 'navy', '&:hover': { color: 'blue' } }}
-            className='ml-4 scale-150 cursor-pointer'
-            onClick={resetAudio}
-          />
+            <ReplayCircleFilled
+              sx={{ color: 'navy', '&:hover': { color: 'blue' } }}
+              className='ml-4 scale-150 cursor-pointer'
+              onClick={resetAudio}
+            />
           </button>
         </div>
       </div>
-      <ReactAudioPlayer
-      src={selectedAudioURL}
-      autoPlay
-      controls
-      />
-      <div className='whitespace-pre-wrap border-t-2 text-sm md:text-lg border-dashed border-black pt-4 text-center font-baskerville italic'>
+      <div className='whitespace-pre-wrap border-t-2 border-dashed border-black pt-4 text-center font-baskerville text-sm italic md:text-lg'>
         {selectedPoem}
       </div>
-      <p className='text-center font-baskerville my-5'>
-          <Link
-            to='/poetry-index'
-            className='text-hyperlink-blue hover:underline'
-          >
-            Return to Poetry Index
-          </Link>
-        </p>
+      <p className='my-5 text-center font-baskerville'>
+        <Link
+          to='/poetry-index'
+          className='text-hyperlink-blue hover:underline'
+        >
+          Return to Poetry Index
+        </Link>
+      </p>
+      <audio controls src={selectedAudioURL} >seamus ogg</audio>
+      <audio controls src={webmAudio}>seamus webm</audio>
+      <audio controls src={oggAudio}>seamus webm</audio>
     </section>
   );
 };
