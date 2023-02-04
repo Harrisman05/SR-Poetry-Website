@@ -64,6 +64,7 @@ const PoemSelected = () => {
         <div className='flex pb-4 font-baskerville font-bold'>
           <p className='mr-1'>Audio:</p>
           <ReactHowler
+            // format={['webm', 'wav']}
             src={[selectedAudioURL]}
             playing={isPlaying}
             onEnd={promptNextAudio}
