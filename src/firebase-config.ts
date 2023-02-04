@@ -27,7 +27,7 @@ const app = initializeApp(firebaseConfig);
 
 export const db = initializeFirestore(app, {
   experimentalAutoDetectLongPolling: true
-})
+}) // https://github.com/firebase/firebase-js-sdk/issues/6036#issuecomment-1072237987 - fixes database connection not working in production
 
 // Within database, create reference to poems Collection 
 
