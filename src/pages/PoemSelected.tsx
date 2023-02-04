@@ -1,9 +1,10 @@
 import ReactHowler from 'react-howler';
 import { useLocation } from 'react-router-dom';
 import { PoemData } from '../types/poems';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import ReplayCircleFilled from '@mui/icons-material/ReplayCircleFilled';
 
 const PoemSelected = () => {
   const location = useLocation();
@@ -33,6 +34,15 @@ const PoemSelected = () => {
     setPlaying(false); // Flip boolean to Play/Pause Sound
   };
 
+  const howler: any = useRef(null); // https://stackoverflow.com/questions/71016353/call-load-from-react-howler
+
+  const resetAudio = () => {
+    if (howler.current) {
+      howler.current.stop();
+      setPlaying(false);
+    }
+  };
+
   // React Howler can't seem to replay an audio consistently (very frustrating), so added this function to play the start of the next audio clip
 
   const promptNextAudio = () => {
@@ -52,32 +62,39 @@ const PoemSelected = () => {
           {selectedPoemDescription}
         </div>
         <div className='flex pb-4 font-baskerville font-bold'>
-          <p>Audio:</p>
+          <p className='mr-1'>Audio:</p>
           <ReactHowler
             src={[selectedAudioURL]}
             playing={isPlaying}
             onEnd={promptNextAudio}
+            ref={howler}
           />
           {isPlaying ? (
-            <button className='mx-auto w-12 cursor-default'>
-              <PauseCircleIcon
-                sx={{ color: 'crimson', '&:hover': { color: 'red' }}}
-                className='scale-150 cursor-pointer'
-                onClick={stopAudio}
-              />
-            </button>
+              <button className='mx-auto w-12 cursor-default'>
+                <PauseCircleIcon
+                  sx={{ color: 'crimson', '&:hover': { color: 'red' } }}
+                  className='scale-150 cursor-pointer'
+                  onClick={stopAudio}
+                />
+              </button>
           ) : (
-            <button className='mx-auto w-12 cursor-default'>
-              <PlayCircleIcon
-                sx={{ color: 'darkgreen', '&:hover': { color: 'green' } }}
-                className='scale-150 cursor-pointer'
-                onClick={playAudio}
-              />
-            </button>
+              <button className='mx-auto w-12 cursor-default'>
+                <PlayCircleIcon
+                  sx={{ color: 'darkgreen', '&:hover': { color: 'green' } }}
+                  className='scale-150 cursor-pointer'
+                  onClick={playAudio}
+                />
+              </button>
           )}
+          <button>
+          <ReplayCircleFilled
+            sx={{ color: 'navy', '&:hover': { color: 'blue' } }}
+            className='ml-4 scale-150 cursor-pointer'
+            onClick={resetAudio}
+          />
+          </button>
         </div>
       </div>
-
       <div className='whitespace-pre-wrap border-t-2 border-dashed  border-black pt-4 text-center font-baskerville italic'>
         {selectedPoem}
       </div>
