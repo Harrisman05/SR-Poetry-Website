@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from 'react';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import ReplayCircleFilled from '@mui/icons-material/ReplayCircleFilled';
-import meNameIsSeamus from '../assets/audios/me_name_is_seamus.mp3';
 
 const PoemSelected = () => {
   const location = useLocation();
@@ -18,10 +17,10 @@ const PoemSelected = () => {
   const selectedPoemDescription = state.description;
   const selectedPoemTitle = state.name;
   
-  // const selectedAudioURL = new URL(
-  //   `../assets/audios/${state.audio_file}`,
-  //   import.meta.url
-  // ).href; // https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
+  const selectedAudioURL = new URL(
+    `../assets/audios/${state.audio_file}`,
+    import.meta.url
+  ).href; // https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
 
   const selected2 = meNameIsSeamus;
 
