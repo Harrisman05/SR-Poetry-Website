@@ -7,13 +7,15 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <nav className='sticky flex w-auto justify-between bg-blue-200 px-2 pt-1 font-handlee'>
-      <NavLink
-        to='/'
-        className='align-center flex flex-col text-sm hover:cursor-pointer hover:text-purple-700 hover:underline md:text-base lg:text-lg'
-      >
-        <IoHome className='w-full text-orange-400' />
-        Home
-      </NavLink>
+      <div className='align-center flex flex-col'>
+        <NavLink
+          to='/'
+          className='text-sm hover:cursor-pointer hover:text-purple-700 hover:underline md:text-base lg:text-lg'
+        >
+          <IoHome className='w-full text-orange-400' />
+          Home
+        </NavLink>
+      </div>
       <NavLink
         to='poetry-index'
         className='align-center flex flex-col text-sm hover:cursor-pointer hover:text-purple-700 hover:underline md:text-base lg:text-lg'
