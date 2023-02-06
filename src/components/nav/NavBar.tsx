@@ -12,7 +12,7 @@ const NavBar = () => {
           to='/'
           className='text-sm hover:cursor-pointer hover:text-purple-700 hover:underline md:text-base lg:text-lg'
         >
-          <IoHome className='w-full text-orange-900' />
+          <IoHome className='text-orange-900' />
           Home
         </NavLink>
       </div>
