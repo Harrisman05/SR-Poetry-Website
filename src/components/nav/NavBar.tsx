@@ -7,12 +7,12 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <nav className='sticky flex w-auto justify-between bg-blue-200 px-2 pt-1 font-handlee'>
-      <div className='bg-slate-500'>
+      <div className='relative bg-slate-500'>
         <NavLink
           to='/'
           className='text-sm hover:cursor-pointer hover:text-purple-700 hover:underline md:text-base lg:text-lg'
         >
-          <IoHome className='text-orange-900' />
+          <IoHome className='relative left-1/4 text-orange-900' />
           Home
         </NavLink>
       </div>
