@@ -35,13 +35,13 @@ const NavBar = () => {
         </NavLink>
       </div>
       <div className='relative'>
-      <NavLink
-        to='contact-me'
-        className='text-sm hover:cursor-pointer hover:text-purple-700 hover:underline md:text-base lg:text-lg'
-      >
-        <IoMailSharp className='relative left-[40%] text-gray-600' />
-        Contact me
-      </NavLink>
+        <NavLink
+          to='contact-me'
+          className='text-sm hover:cursor-pointer hover:text-purple-700 hover:underline md:text-base lg:text-lg'
+        >
+          <IoMailSharp className='relative left-[40%] text-gray-600' />
+          Contact me
+        </NavLink>
       </div>
     </nav>
   );
