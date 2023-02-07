@@ -1,4 +1,3 @@
-import hero_image from '../../assets/profile_pic.png';
 import About from './About';
 import HeroText from './HeroText';
 
