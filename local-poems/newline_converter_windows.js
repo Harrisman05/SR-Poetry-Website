@@ -12,8 +12,8 @@ import * as fs from 'node:fs';
 
     */
 
-const input_poem_filepath = '2_Tripe_Hounds_and_Dirt_Birds/Tripe_Hounds_And_Dirt_Birds_input.txt';
-const output_poem_filepath = '2_Tripe_Hounds_and_Dirt_Birds/Tripe_Hounds_And_Dirt_Birds_converted.txt';
+const input_poem_filepath = '4_How_do_ya_bury_a_ghost/How_do_ya_bury_a_ghost_input.txt';
+const output_poem_filepath = '4_How_do_ya_bury_a_ghost/How_do_ya_bury_a_ghost_converted.txt';
 
 const readFile = fs.readFileSync(
   input_poem_filepath,
