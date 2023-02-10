@@ -26,6 +26,7 @@ const router = createBrowserRouter(
       <Route path='poem-selected' element={<PoemSelected />} />
       <Route path='media' element={<Media />} />
       <Route path='contact-me' element={<ContactMe />} />
+      <Route path='/*' element={<Home />} />
     </Route>
   )
 );
