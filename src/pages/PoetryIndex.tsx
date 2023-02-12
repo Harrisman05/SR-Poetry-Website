@@ -20,9 +20,9 @@ const Poetry = () => {
 
       console.log(data);
 
-      // confusing syntax, but extract all the data and id from the data.docs property and map it to a new object
-
       setTimeout(() => console.log(poems), 5000);
+      
+      // confusing syntax, but extract all the data and id from the data.docs property and map it to a new object
 
       setPoems(data.docs.map((doc: any) => ({ id: doc.id, ...doc.data() }))); // lose type safety setting database data to PoemsData array
       setLoading(false);
@@ -43,18 +43,20 @@ const Poetry = () => {
             <RotatingLines />
           </div>
         ) : null}
-        {poems.map((poem) => {
-          return (
-            <Link
-              to='/poem-selected'
-              state={poem}
-              key={poem.id}
-              className=' py-2 text-center font-tangerine text-3xl text-hyperlink-blue hover:underline'
-            >
-              {poem.name}
-            </Link>
-          );
-        })}
+        {poems
+          .sort((a, b) => a.upload_order - b.upload_order)
+          .map((poem) => {
+            return (
+              <Link
+                to='/poem-selected'
+                state={poem}
+                key={poem.id}
+                className=' py-2 text-center font-tangerine text-3xl text-hyperlink-blue hover:underline'
+              >
+                {poem.name}
+              </Link>
+            );
+          })}
       </div>
     </section>
   );
