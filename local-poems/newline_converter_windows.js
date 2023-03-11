@@ -12,8 +12,8 @@ import * as fs from 'node:fs';
 
     */
 
-const input_poem_filepath = '5_Blooming_Mary/blooming_mary_input.txt';
-const output_poem_filepath = '5_Blooming_Mary/blooming_mary_converted.txt';
+const input_poem_filepath = '6_You_Wont_Need_A_Stick/you_wont_need_a_stick_input.txt';
+const output_poem_filepath = '6_You_Wont_Need_A_Stick/you_wont_need_a_stick_converted.txt';
 
 const readFile = fs.readFileSync(
   input_poem_filepath,
