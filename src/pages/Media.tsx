@@ -28,11 +28,6 @@ const Media = () => {
         >
           @Seamus_the_Poet
         </a>
-        <div className='flex items-center justify-between gap-3'>
-          <p className='font-roboto text-xl lg:text-3xl'>Instagram</p>
-          <InstagramIcon className='lg:scale-150' sx={{ fontSize: 50 }} />
-        </div>
-        <p className='lg:text-2xl'>Coming soon...</p>
       </div>
     </section>
   );
